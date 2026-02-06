@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Paulino | AI Change Management & Digital Transformation Strategist</title>
+    <meta name="description" content="18+ years leading enterprise AI transformation across complex EU institutions. Specialized in AI governance, machine learning, and change management.">
+    <style>
+        /* Apple-inspired design system */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-black: #000000;
+            --text-dark: #1d1d1f;
+            --text-gray: #86868b;
+            --accent-blue: #0071e3;
+            --light-bg: #f5f5f7;
+            --white: #ffffff;
+            --border-subtle: #d2d2d7;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-black);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 60px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+            padding: 4rem 2rem;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--primary-black);
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .hero .tagline {
+            font-size: 1.25rem;
+            color: var(--text-dark);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.875rem 2rem;
+            border-radius: 980px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--accent-blue);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: #0077ED;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-blue);
+            border: 2px solid var(--accent-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent-blue);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-gray);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .section-light {
+            background: var(--light-bg);
+        }
+
+        .section-white {
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-black);
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .section-description {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-text h3 {
+            font-size: 1.75rem;
+            color: var(--primary-black);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .about-text p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-box {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 18px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .highlight-box h4 {
+            font-size: 1.25rem;
+            color: var(--primary-black);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .highlight-box ul {
+            list-style: none;
+        }
+
+        .highlight-box li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-subtle);
+            color: var(--text-dark);
+        }
+
+        .highlight-box li:last-child {
+            border-bottom: none;
+        }
+
+        .highlight-box li::before {
+            content: "✓";
+            color: var(--accent-blue);
+            font-weight: bold;
+            margin-right: 0.75rem;
+        }
+
+        /* Expertise Grid */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .expertise-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 18px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .expertise-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .expertise-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-black);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .expertise-card p {
+            font-size: 1rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .expertise-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--light-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: var(--text-dark);
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin-top: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-subtle);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            border: 3px solid var(--white);
+            box-shadow: 0 0 0 4px var(--light-bg);
+        }
+
+        .timeline-date {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            color: var(--primary-black);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .timeline-company {
+            font-size: 1.125rem;
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .timeline-description li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        .timeline-description li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--primary-black) 0%, #1a1a1a 100%);
+            color: var(--white);
+            padding: 6rem 2rem;
+        }
+
+        .contact .section-title {
+            color: var(--white);
+        }
+
+        .contact .section-description {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-blue);
+        }
+
+        .contact-item a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.125rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-black);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.25rem;
+            }
+
+            .hero .tagline {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline-item::before {
+                left: -2.5rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Alberto Paulino</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content animate-fade-in">
+            <h1>Alberto Paulino</h1>
+            <p class="subtitle">AI Change Management & Digital Transformation Strategist</p>
+            <p class="tagline">
+                18+ years architecting enterprise-wide digital adoption across complex EU institutions. 
+                Specialized in AI strategy, machine learning, and change management excellence.
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                <a href="#expertise" class="btn btn-secondary">View Expertise</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">40%</div>
+                <div class="stat-label">Faster AI Adoption</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">32K+</div>
+                <div class="stat-label">Users Impacted</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">92%</div>
+                <div class="stat-label">Training Effectiveness</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">€643B</div>
+                <div class="stat-label">Platform Managed</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-description">
+                    Transforming AI potential into measurable business impact
+                </p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Driving Digital Excellence</h3>
+                    <p>
+                        I help organizations navigate the complex landscape of AI transformation by bridging 
+                        the gap between cutting-edge technology and organizational readiness. My approach 
+                        combines strategic AI governance, machine learning proficiency, and proven change 
+                        management methodologies to drive sustainable adoption.
+                    </p>
+                    <p>
+                        Currently leading the Phase One AI Implementation Plan at the European Commission, 
+                        I orchestrate change initiatives that impact thousands of users while maintaining 
+                        exceptional satisfaction rates and measurable productivity improvements.
+                    </p>
+                    <p>
+                        With degrees in Computer Engineering and Economics, I bring a unique perspective 
+                        that balances technical depth with business acumen, enabling me to communicate 
+                        effectively with stakeholders at all levels.
+                    </p>
+                </div>
+                <div>
+                    <div class="highlight-box">
+                        <h4>Core Strengths</h4>
+                        <ul>
+                            <li>AI Strategy & Governance</li>
+                            <li>Machine Learning & AI Agents</li>
+                            <li>Prosci ADKAR & Kotter Methodologies</li>
+                            <li>Cross-Functional Team Leadership</li>
+                            <li>Technical Training Excellence</li>
+                            <li>Multilingual Communication</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="section-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Areas of Expertise</h2>
+                <p class="section-description">
+                    Comprehensive capabilities spanning AI transformation, change management, and organizational excellence
+                </p>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="expertise-icon">🤖</div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>
+                        Leading enterprise AI implementations with expertise in AI agents, machine learning 
+                        platforms, and strategic AI governance frameworks.
+                    </p>
+                    <div class="expertise-tags">
+                        <span class="tag">GPT@EC</span>
+                        <span class="tag">AI Agents</span>
+                        <span class="tag">ML Platforms</span>
+                        <span class="tag">AI Governance</span>
+                    </div>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-icon">🔄</div>
+                    <h3>Change Management</h3>
+                    <p>
+                        Orchestrating organizational transformation using proven methodologies including 
+                        Prosci ADKAR and Kotter's 8-Step Model.
+                    </p>
+                    <div class="expertise-tags">
+                        <span class="tag">Prosci ADKAR</span>
+                        <span class="tag">Kotter Model</span>
+                        <span class="tag">Agile/Scrum</span>
+                        <span class="tag">ITIL</span>
+                    </div>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-icon">📊</div>
+                    <h3>Project & Business Analysis</h3>
+                    <p>
+                        Driving strategic initiatives through comprehensive project management, requirements 
+                        gathering, and process optimization.
+                    </p>
+                    <div class="expertise-tags">
+                        <span class="tag">Project Management</span>
+                        <span class="tag">Business Analysis</span>
+                        <span class="tag">Process Optimization</span>
+                    </div>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-icon">🎓</div>
+                    <h3>Technical Training</h3>
+                    <p>
+                        Designing and delivering high-impact training programs with 92% effectiveness ratings 
+                        across diverse stakeholder groups.
+                    </p>
+                    <div class="expertise-tags">
+                        <span class="tag">LMS Management</span>
+                        <span class="tag">Training Design</span>
+                        <span class="tag">Public Speaking</span>
+                    </div>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-icon">🌐</div>
+                    <h3>Digital Transformation</h3>
+                    <p>
+                        Architecting enterprise-wide digital adoption strategies that simplify complexity 
+                        and accelerate technology implementation.
+                    </p>
+                    <div class="expertise-tags">
+                        <span class="tag">Enterprise Architecture</span>
+                        <span class="tag">Digital Strategy</span>
+                        <span class="tag">Innovation</span>
+                    </div>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-icon">👥</div>
+                    <h3>Leadership & Collaboration</h3>
+                    <p>
+                        Leading cross-functional teams and engaging stakeholders across cultural and 
+                        organizational boundaries in 6 languages.
+                    </p>
+                    <div class="expertise-tags">
+                        <span class="tag">Team Leadership</span>
+                        <span class="tag">Stakeholder Engagement</span>
+                        <span class="tag">Multilingual</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-description">
+                    18+ years driving digital excellence across leading organizations
+                </p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024 – Present</div>
+                    <h3 class="timeline-title">AI Change Management Consultant & Digital Transformation Strategist</h3>
+                    <div class="timeline-company">European Commission, Brussels</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Lead Phase One AI Implementation Plan under AI@EC strategy, impacting 32,000+ EU officials</li>
+                            <li>Design and deliver AI training programs reaching 5,000+ participants annually with 92% effectiveness</li>
+                            <li>Accelerate AI adoption by 40% through human-centered implementation frameworks</li>
+                            <li>Lead Commission-wide Change Management Working Group across multiple Directorates-General</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 – 2024</div>
+                    <h3 class="timeline-title">Technical Training Specialist & Change Management Officer</h3>
+                    <div class="timeline-company">ARACHNE Project, European Commission DG EMPL</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Delivered training for EU's AI-driven platform monitoring €643 billion in EU funds</li>
+                            <li>Maintained 95%+ user satisfaction across 3,000+ users across 27 Member States</li>
+                            <li>Authored 25+ technical guides, reducing onboarding time by 50%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2013 – 2024</div>
+                    <h3 class="timeline-title">Senior Technical Trainer & Change Management Officer</h3>
+                    <div class="timeline-company">European Commission, DIGIT</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Executed large-scale ICT training for 10,000+ users with 90%+ effectiveness ratings</li>
+                            <li>Resolved 5,000+ incidents annually maintaining 98% SLA compliance</li>
+                            <li>Implemented 30+ process improvements reducing system friction by 25%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2008 – 2013</div>
+                    <h3 class="timeline-title">Technical Training Consultant & Change Management Officer</h3>
+                    <div class="timeline-company">European Commission, Secretariat-General</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Delivered training on DECIDE legislative workflow platform to thousands of EU officials</li>
+                            <li>Created 40+ technical manuals improving documentation efficiency by 20%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2003 – 2008</div>
+                    <h3 class="timeline-title">Technical Training Consultant & Documentation Specialist</h3>
+                    <div class="timeline-company">Canon Europe</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Led technical documentation and client training across EMEA region</li>
+                            <li>Championed digital transformation reducing carbon footprint by 15%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-description">
+                    Ready to accelerate your AI transformation journey? Let's discuss how we can drive measurable results together.
+                </p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <a href="mailto:albertofpaulino@gmail.com">albertofpaulino@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <a href="tel:+32485264181">+32 485 264 181</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <a href="https://linkedin.com/in/alberto-paulino-20b7b815" target="_blank">LinkedIn Profile</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <span style="color: white;">Brussels, Belgium</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Alberto Paulino. AI Change Management & Digital Transformation Strategist.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and timeline items
+        document.querySelectorAll('.expertise-card, .timeline-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
